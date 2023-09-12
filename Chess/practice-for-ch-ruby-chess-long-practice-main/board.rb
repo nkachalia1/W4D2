@@ -28,11 +28,6 @@ class Board
     end
 
     def move_piece(start_pos, end_pos)
-        # The `Board` class should have a `#move_piece(start_pos, end_pos)` method. This
-        # should update the 2D grid and also the moved piece's position. You'll want to
-        # raise an exception if:
-
-        # 1. there is no piece at `start_pos` or
-        # 2. the piece cannot move to `end_pos`.
+        
     end
 end
