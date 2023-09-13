@@ -1,4 +1,6 @@
 require_relative "piece"
+require 'byebug'
+require_relative 'all_pieces'
 
 class Board
     attr_reader :rows
@@ -18,7 +20,7 @@ class Board
             end
             self[[6, col]] = Pawn.new(:black, self, [6, col])
             self[[7, col]] = back_row[col].new(:black, self, [7, col])
-            
+
         end
     end
 
