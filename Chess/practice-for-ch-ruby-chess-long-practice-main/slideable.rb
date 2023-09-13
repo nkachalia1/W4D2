@@ -19,7 +19,7 @@ module Slideable
     # iterate over each of the directions in which a slideable piece can move
       # use the Piece subclass' `#move_dirs` method to get this info
       # for each direction, collect all possible moves in that direction
-        # and add them to your moves array 
+        # and add them to your moves array
         # (use the `grow_unblocked_moves_in_dir` helper method)
     self.move_dirs.each do |direction|
         dx, dy = direction
@@ -55,7 +55,7 @@ module Slideable
 
   def move_dirs
     # subclass implements this
-    raise NotImplementedError # this only executes if 
+    raise NotImplementedError # this only executes if
   end
 
   # this helper method is only responsible for collecting all moves in a given direction
@@ -109,7 +109,7 @@ end
 
 #     private
 #     HORIZONTAL_DIRS = Array.new
-#     DIAGONAL_DIRS = Array.new    
+#     DIAGONAL_DIRS = Array.new
 
 #     def move_dirs
 #     end
