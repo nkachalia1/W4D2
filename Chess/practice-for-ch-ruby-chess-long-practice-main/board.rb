@@ -5,15 +5,20 @@ class Board
 
     def initialize
         @rows = Array.new(8) {Array.new(8)}
+        self.populate_board
     end
 
     def populate_board
-        back_row = ["Rook", "Knight", "Bishop", "King", "Queen", "Bishop", "Knight", "Rook"]
-        (0..7).each do |i|
-            self[[0, i]] = Piece.new(back_row[i])
-            self[[1, i]] = Piece.new("Pawn")
-            self[[6, i]] = Piece.new("Pawn")
-            self[[7, i]] = Piece.new(back_row[i])
+        back_row = [Rook, Knight, Bishop, King, Queen, Bishop, Knight, Rook]
+        (0..7).each do |col|
+            self[[0, col]] = back_row[col].new(:white, self, [0, col])
+            self[[1, col]] = Pawn.new(:white, self, [1, col])
+            (2..5).each do |row|
+                self[[row, col]] = NullPiece.instance
+            end
+            self[[6, col]] = Pawn.new(:black, self, [6, col])
+            self[[7, col]] = back_row[col].new(:black, self, [7, col])
+            
         end
     end
 

@@ -15,6 +15,7 @@ class Queen < Piece
   #   # a queen can move horizontally (across rows and columns) and diagonally
   def move_dirs
     DIAGONAL_DIRS + HORIZONTAL_DIRS
+  end
 end
 
 

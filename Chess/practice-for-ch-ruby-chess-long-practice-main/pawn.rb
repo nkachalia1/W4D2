@@ -5,9 +5,16 @@ class Pawn < Piece
   include Stepable
 
   def symbol
-    '♞'.colorize(color)
+    '♟︎'.colorize(color)
   end
 
+  def moves
+    # if at_start_row?
+
+    # else
+
+    # end
+  end
   protected
 
   def move_diffs
