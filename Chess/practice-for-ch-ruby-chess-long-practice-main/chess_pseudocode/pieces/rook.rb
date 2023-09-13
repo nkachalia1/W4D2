@@ -4,10 +4,6 @@ require_relative 'slideable'
 class Rook < Piece
   include Slideable
 
-  def initialize(color, board, position)
-    super(color, board, position)
-  end
-
   def symbol
     '♜'.colorize(color)
   end
